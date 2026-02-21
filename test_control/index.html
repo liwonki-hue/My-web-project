@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction - IPCS</title>
+    <style>
+        :root {
+            --warning-color: #f1c40f;
+            --bg-color: #f8f9fa;
+        }
 
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .status-card {
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 550px;
+            width: 90%;
+            border-bottom: 8px solid var(--warning-color);
+        }
+
+        /* Animated Safety Icon */
+        .safety-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--warning-color);
+            margin: 0 auto 30px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .safety-icon::after {
+            content: "!";
+            color: #333;
+            font-size: 40px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* Animated Loading Strip */
+        .progress-strip {
+            height: 6px;
+            width: 100%;
+            background: #eee;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .progress-strip::after {
+            content: "";
+            display: block;
+            width: 40%;
+            height: 100%;
+            background: var(--warning-color);
+            animation: loading 1.5s infinite ease-in-out;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: white;
+            background: #2c3e50;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #34495e;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(250%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="status-card">
+        <div class="safety-icon"></div>
+        <h2>Under Construction</h2>
+        <p>
+            The selected module is currently being optimized for enhanced performance and data integrity. <br>
+            Please check back soon.
+        </p>
+        
+        <div class="progress-strip"></div>
+
+        <a href="../" class="btn-back">Return to Dashboard</a>
+    </div>
+
+</body>
+</html>
