@@ -8,7 +8,7 @@ GitHub Actions 에서 자동 실행됨
   SQL_SERVER   : dwg-server-2171.database.windows.net
   SQL_DATABASE : Dwg_Database
   SQL_USERNAME : dwgadmin
-  SQL_PASSWORD : (비밀번호)
+  SQL_PASSWORD : @chohee0710$
 """
 
 import os
